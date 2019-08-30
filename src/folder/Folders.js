@@ -1,65 +1,21 @@
 import React from "react";
-import classes from "./folders.css";
 import storeData from "../store/storeData";
+import "./folders.css";
 
-class Folders extends React.Component {
-  static defaultProps = { folders: [] };
-  state = {
-    currentFoldersIndex: 0
-  };
+const folders = props => {
+  console.log(props);
+  return (
+    <ul className="Folders">
+      {Object.keys(storeData).map(folders => (
+        <li key={folders.id}>
+          <button className="Folder" onClick={props.clicked}>
+            {folders.name}
+            {console.log(folders)}
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-  componentDidMount(){
-    console.log(this.props)
-    this.props.storeData()
-  }
-
-
-  render() {
-    const storeData
-    return (
-      <div className="folder">
-
-        {this.props.folders}
-        {console.log(this.props.folders)}
-      </div>
-    );
-  }
-
-  // handleButtonClick(index) {
-  //   console.log("BUTTON WAS CLICKED!", { index });
-  //   this.setState({ currentFoldersIndex: index });
-  // }
-
-  // renderButtons() {
-  //   if (this.props.folders) {
-  //     return this.props.folders.map((folder, index) => (
-  //       <li key={index}>
-  //       {console.log()}
-  //       <button
-  //       className={classes.folders}
-  //       key={index}
-  //       onClick={() => this.handleButtonClick(index)}
-  //       >
-  //       {folder.id}
-  //           </button>
-  //         </li>
-  //       ));
-  //   }
-  // }
-
-  // renderContent() {
-  //   const currentFolder = this.props.folders[this.state.currentFoldersIndex];
-  //   return <div className="content">{currentFolder.content}</div>;
-  // }
-
-  // render() {
-  //   return (
-  // <div className="folder">
-  //   <ul>{this.renderButtons()}</ul>
-  //   {!!this.props.folders && this.renderContent}
-  // </div>
-  //   );
-  // }
-}
-
-export default Folders;
+export default folders;
