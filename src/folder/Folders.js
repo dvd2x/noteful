@@ -1,21 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import storeData from "../store/storeData";
 import "./folders.css";
 
-const folders = props => {
-  console.log(props);
-  return (
-    <ul className="Folders">
-      {Object.keys(storeData).map(folders => (
-        <li key={folders.id}>
-          <button className="Folder" onClick={props.clicked}>
-            {folders.name}
-            {console.log(folders)}
-          </button>
-        </li>
-      ))}
-    </ul>
-  );
-};
+class Folders extends Component {
+  state = {
+    folders: []
+  };
 
-export default folders;
+  componentDidMount() {
+    setTimeout(() => this.setState(storeData), 600);
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <ul className="Folders">
+          {this.state.folders.map(folder => (
+            <li key={folder.id}>
+              <Link to={`/notes/${this.state.id}`}>
+                <button className="Folder">
+                  {folder.name}
+                </button>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </React.Fragment>
+    );
+  }
+}
+
+export default Folders;

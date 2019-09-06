@@ -1,23 +1,30 @@
-import React from 'react'
+import React, { Component } from "react";
+import storeData from "../store/storeData";
 
-class notes extends React.Component{
-  static defaultProps = {notes:[]}
+class Notes extends Component {
   state = {
-    currentNotesIndex:0
+    notes: []
+  };
+
+  componentDidMount() {
+    setTimeout(() => this.setState(storeData), 600);
   }
 
-  renderContent() {
-    const currentFolder = this.props.folders[this.state.currentFoldersIndex];
-    return <div className="content">{currentFolder.name.content}</div>;
-  }
-  render(){
+  render() {
     return (
-      <div className='notes'>
-      <p>{this.renderContent}</p>
-
-      </div>
-    )
+      <React.Fragment>
+        <ul>
+          {this.state.notes.map(note => (
+            <li key={note.id}>
+              <h1>{note.name}</h1>
+              {note.content}
+              {console.log(note.name)}
+            </li>
+          ))}
+        </ul>
+      </React.Fragment>
+    );
   }
 }
 
-export default notes
+export default Notes;

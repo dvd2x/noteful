@@ -1,19 +1,33 @@
 .Folder {
-  width: 250px;
-  padding: 16px;
+  width: 150px;
+  padding-bottom: 3px;
   text-align: center;
   border: 1px solid #eee;
-  box-shadow: 0 2px 3px #ccc;
+  box-shadow: 0 2px 3px rgb(103, 106, 151);
   margin: 10px;
   box-sizing: border-box;
   cursor: pointer;
+  background-color: rgb(27, 25, 53);
+  color: white;
+  padding: 5%;
 }
 
 .Folder:hover,
 .Folder:active {
-  background-color: #c0ddf5;
+  background-color: #5467a7;
 }
 
 .Folders li {
   list-style-type: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 150px;
+}
+
+.Folders a {
+  text-decoration: none;
+}
+
+.Folders {
+  font-size: 20px;
 }

@@ -1,35 +1,23 @@
-import React from "react";
-import Folders from "../folder/Folders";
-import notes from "../notes/notes";
+import React, { Component } from "react";
+import Folders from "../folder/folders";
+import storeData from "../store/storeData";
+import Notes from "../notes/notes";
 
-class MainRoute extends React.Component {
-  static defaultProps = {
+class MainRoute extends Component {
+  state = {
     folders: [],
     notes: []
   };
-  state = {
-    currentFolderIndex: 0,
-    currentNoteIndex: 0
-  };
 
-  renderContent() {
-    const currentFolderIndex = this.props.folders;
-    const currentNoteIndex = this.props.notes[this.state.currentFolderIndex][
-      this.state.currentNoteIndex
-    ];
-    return (
-      <div>
-        <div className="content">{currentFolderIndex}</div>
-        <div className="folder">{currentNoteIndex}</div>
-      </div>
-    );
+  componentDidMount() {
+    setTimeout(() => this.setState(storeData), 600);
   }
 
   render() {
     return (
       <div>
         <Folders />
-        <notes />
+        <Notes />
       </div>
     );
   }
