@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/noteful/static/css/main.39014149.chunk.css",
-    "main.js": "/noteful/static/js/main.4e75ab5e.chunk.js",
-    "main.js.map": "/noteful/static/js/main.4e75ab5e.chunk.js.map",
+    "main.css": "/noteful/static/css/main.685abd32.chunk.css",
+    "main.js": "/noteful/static/js/main.fbbcf341.chunk.js",
+    "main.js.map": "/noteful/static/js/main.fbbcf341.chunk.js.map",
     "runtime~main.js": "/noteful/static/js/runtime~main.88443d30.js",
     "runtime~main.js.map": "/noteful/static/js/runtime~main.88443d30.js.map",
-    "static/js/2.21a88273.chunk.js": "/noteful/static/js/2.21a88273.chunk.js",
-    "static/js/2.21a88273.chunk.js.map": "/noteful/static/js/2.21a88273.chunk.js.map",
+    "static/js/2.dc3461ef.chunk.js": "/noteful/static/js/2.dc3461ef.chunk.js",
+    "static/js/2.dc3461ef.chunk.js.map": "/noteful/static/js/2.dc3461ef.chunk.js.map",
     "index.html": "/noteful/index.html",
-    "precache-manifest.2aeb734043dfdd072061ad004157ad0f.js": "/noteful/precache-manifest.2aeb734043dfdd072061ad004157ad0f.js",
+    "precache-manifest.1d05cd12480a5325a07d04d5188bd2f9.js": "/noteful/precache-manifest.1d05cd12480a5325a07d04d5188bd2f9.js",
     "service-worker.js": "/noteful/service-worker.js",
-    "static/css/main.39014149.chunk.css.map": "/noteful/static/css/main.39014149.chunk.css.map"
+    "static/css/main.685abd32.chunk.css.map": "/noteful/static/css/main.685abd32.chunk.css.map"
   }
 }
